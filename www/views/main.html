@@ -1,0 +1,27 @@
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+    <div class="container">
+        <h1>Benchmark and reach your potential</h1>
+        <p>Do you care about your digital marketing and web traffic? So do we!<br>
+        Start benchmarking against yourself, your industry and your potential.</p>
+        <p>
+            <a class="btn btn-primary btn-md" role="button">Get <em>your</em> benchmark &raquo;</a>
+        </p>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Example row of columns -->
+    <div class="row feature-list">
+        <div class="col-md-4 col-xs-12" ng-repeat="f in featureList">
+            <a href="/feature/{{f.url}}">
+            <h2>{{f.heading}}</h2>
+            <img
+                ng-src="{{mediaUrl(f.mediaId, imgWidth)}}"
+                alt="{{f.heading}}"
+                width="{{imgWidth}}"
+                class="img-thumbnail">
+            </a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="jumbotron">
+    <div class="container">
+        <h1>{{feature.heading}}</h1>
+        <p>{{feature.description}}</p>
+        <p><a class="btn btn-primary btn-md" role="button">{{feature.cta}}</a></p>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <img
+            ng-src="{{mediaUrl(feature.mediaId, 600, 300)}}"
+            alt="{{feature.heading}}"
+            class="img-thumbnail">
+    </div>
+</div>

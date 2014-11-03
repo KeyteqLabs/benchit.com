@@ -1,0 +1,15 @@
+[
+    { 
+        "url": "trending-pages",
+        "heading": "Dont miss trends",
+        "mediaId": "545626bfb76c7069448b4c21"
+    }, {
+        "url": "performance-graph",
+        "heading": "Visualize performance",
+        "mediaId": "545610d4b76c70c67d8b467f"
+    }, {
+        "url": "traffic-sources",
+        "heading": "Dive into details",
+        "mediaId": "545610d5b76c70a36d8b4708"
+    }
+]
