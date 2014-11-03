@@ -2,14 +2,59 @@
     { 
         "url": "trending-pages",
         "heading": "Dont miss trends",
-        "mediaId": "545626bfb76c7069448b4c21"
+        "mediaId": "545626bfb76c7069448b4c21",
+        "desc": "See how your content trend up, or down, and take the necessary action. When that unexpected old story suddenly starts peeking, keep on top of that story!",
+        "cta": "Dont miss another opportunity, get Benchit",
+        "bullets": [
+            {
+                "x": 20, "y": 5,
+                "desc": "Toggle between trending and largest pages mode"
+            }, {
+                "x": 25, "y": 45,
+                "desc": "Incoming visitors trends are grouped by source and page"
+            }, {
+                "x": 330, "y": 45,
+                "desc": "See recent growth in visitors from a source to one of your pages"
+            }, {
+                "x": 330, "y": 140,
+                "desc": "Traffic can trend both up and down"
+            }
+        ]
     }, {
         "url": "performance-graph",
         "heading": "Visualize performance",
-        "mediaId": "545610d4b76c70c67d8b467f"
+        "mediaId": "545610d4b76c70c67d8b467f",
+        "desc": "Benchit is the only tool that not only shows you how your traffic is rising or shrinking, but also compares it against your own Smart Average, your industry benchmark and your potential.",
+        "cta": "Get your industry benchmark",
+        "bullets": [
+            {
+                "x": 70, "y": 15,
+                "desc": "Visualize your normal, average visitor graph"
+            }, {
+                "x": 200, "y": 75,
+                "desc": "compared to your actual latest traffic"
+            }, {
+                "x": 250, "y": 145,
+                "desc": "and the industry benchmark of your peers"
+            }
+        ]
     }, {
         "url": "traffic-sources",
         "heading": "Dive into details",
-        "mediaId": "545610d5b76c70a36d8b4708"
+        "desc": "Benchit allows you to break down your traffic sources into categories, like Search, Publishing, Social and more, and see how your traffic looks in either category. You can break down on landing pages and campaigns to see how the content that matters are driving in visitors.",
+        "mediaId": "545610d5b76c70a36d8b4708",
+        "cta": "Start tracking your traffic right now",
+        "bullets": [
+            {
+                "x": 70, "y": 0,
+                "desc": "Inspect all organic or paid sources for a category or page"
+            }, {
+                "x": 60, "y": 55,
+                "desc": "See average, current and industry benchmark movements"
+            }, {
+                "x": 160, "y": 85,
+                "desc": "Green light means traffic from this source is going up"
+            }
+        ]
     }
 ]

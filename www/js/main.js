@@ -32,7 +32,6 @@ angular.module('benchit.com', ['ui.router'])
                 resolve: {
                     features: featuresResolver,
                     feature: function($stateParams, features) {
-                        console.log(features);
                         var key = $stateParams.feature;
                         for (var i = 0; i < features.data.length; i++) {
                             if (features.data[i].url === key) {
@@ -51,7 +50,6 @@ angular.module('benchit.com', ['ui.router'])
         }
     })
     .controller('Feature', function($scope, feature) {
-        console.log(feature);
         $scope.feature = feature;
     })
     .controller('Main', function($scope, $rootScope, features) {

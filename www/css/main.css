@@ -1,3 +1,29 @@
 .feature-list a {
     color: inherit;
 }
+
+.rel {
+    position: relative;
+}
+
+.bullet {
+    position: absolute;
+    z-index: 10;
+    display: block;
+    background: red;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    border-radius: 34px;
+    border: 2px solid red;
+    opacity: .5;
+}
+.bullet:hover, .bullet.active {
+    opacity: .8;
+}
+
+.feature-desc li {
+    font-size: 1.6em;
+    line-height: 2em;
+}

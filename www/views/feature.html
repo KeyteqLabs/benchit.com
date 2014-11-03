@@ -1,15 +1,25 @@
 <div class="jumbotron">
     <div class="container">
         <h1>{{feature.heading}}</h1>
-        <p>{{feature.description}}</p>
-        <p><a class="btn btn-primary btn-md" role="button">{{feature.cta}}</a></p>
+        <p>{{feature.desc}}</p>
+        <p>
+        <a class="btn btn-primary btn-md" role="button">{{feature.cta}}</a></p>
     </div>
 </div>
 <div class="container">
-    <div class="row">
-        <img
-            ng-src="{{mediaUrl(feature.mediaId, 600, 300)}}"
-            alt="{{feature.heading}}"
-            class="img-thumbnail">
+    <div class="media">
+        <div class="media-left rel">
+            <span ng-repeat="b in feature.bullets"
+                class="bullet"
+                style="top:{{b.y}}px;left:{{b.x}}px;">{{$index+1}}</span>
+            <img ng-src="{{mediaUrl(feature.mediaId, 600, 300)}}"
+                alt="{{feature.heading}}"
+                class="img-thumbnail">
+        </div>
+        <div class="media-body feature-desc">
+            <ol>
+                <li ng-repeat="b in feature.bullets">{{b.desc}}</li>
+            </ol>
+        </div>
     </div>
 </div>
