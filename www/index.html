@@ -16,6 +16,7 @@
         </style>
         <link rel="stylesheet" href="/css/main.css">
         <script src="/vendor/modernizr/modernizr.js"></script>
+        <script src="/vendor/jquery/dist/jquery.min.js"></script>
     </head>
     <body ng-app="benchit.com">
         <div class="navbar navbar-fixed-top" role="navigation">
@@ -43,5 +44,14 @@
     <script src="/vendor/angular/angular.js"></script>
     <script src="/vendor/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="/js/main.js"></script>
+    <script>
+        var _nos = _nos || [];
+        _nos.push(['setAID','BA-0001'],['trackView']);
+        (function(w,d,t,u){
+            var n=d.createElement(t);n.async=true;n.src=u;
+            var s = d.getElementsByTagName(t)[0];
+            s.parentNode.insertBefore(n, s);
+        }(window,document,'script','//tr.benchit.com/nostradamus.js'));
+    </script>
 </body>
 </html>

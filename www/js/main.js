@@ -55,4 +55,28 @@ angular.module('benchit.com', ['ui.router'])
     .controller('Main', function($scope, $rootScope, features) {
         $scope.imgWidth = 350;
         $scope.featureList = features.data;
+    })
+    .controller('Signup', function($scope, $http) {
+        $scope.user = {
+            email: ''
+        };
+        $scope.success = false;
+        var url = "http://platform.launchrock.com/v1/createSiteUser";
+        $scope.submit = function() {
+            var data = {
+                email: $scope.user.email,
+                site_id: "YZGIKVEW",
+                source: "CE9TOXQR"
+            };
+            $.ajax({
+                url: url,
+                data: data,
+                method: 'post'
+            }).success(function() {
+                $('#signup').hide();
+                $('#success').show();
+                $scope.success = true;
+                $scope.user.done = true;
+            });
+        };
     });
