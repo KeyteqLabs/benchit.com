@@ -25,6 +25,18 @@ angular.module('benchit.com', ['ui.router'])
                 controller: 'Signup',
                 templateUrl: '/views/signup.html',
             })
+            .state('signup.done', {
+                url: '/done',
+                templateUrl: '/views/signup-done.html',
+                params: {ok:true,new:true},
+                controller: function($scope, $stateParams, $state) {
+                    if (typeof $stateParams.new === 'undefined') {
+                        $state.go('signup');
+                    }
+                    $scope.new = $stateParams.new;
+                    $scope.ok = $stateParams.ok;
+                }
+            })
             .state('feature', {
                 url: '/feature/:feature',
                 templateUrl: '/views/feature.html',
@@ -56,13 +68,13 @@ angular.module('benchit.com', ['ui.router'])
         $scope.imgWidth = 350;
         $scope.featureList = features.data;
     })
-    .controller('Signup', function($scope, $http) {
+    .controller('Signup', function($scope, $http, $state) {
         $scope.user = {
             email: ''
         };
-        $scope.success = false;
         var url = "http://platform.launchrock.com/v1/createSiteUser";
         $scope.submit = function() {
+            $scope.loading = true;
             var data = {
                 email: $scope.user.email,
                 site_id: "YZGIKVEW",
@@ -72,11 +84,12 @@ angular.module('benchit.com', ['ui.router'])
                 url: url,
                 data: data,
                 method: 'post'
-            }).success(function() {
-                $('#signup').hide();
-                $('#success').show();
-                $scope.success = true;
-                $scope.user.done = true;
+            }).success(function(res) {
+                var data = res[0].response;
+                $state.go('signup.done', {
+                    ok: data.status == 'OK',
+                    new: data.site_user.new_user == '1'
+                });
             });
         };
     });
