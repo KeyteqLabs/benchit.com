@@ -54,6 +54,14 @@ angular.module('benchit.com', ['ui.router'])
                     }
                 }
             })
+        var staticPages = ['faq', 'terms'];
+        staticPages.forEach(function(state) {
+            $stateProvider.state(state, {
+                url: '/' + state,
+                templateUrl: '/views/' + state + '.html'
+            });
+        });
+
     })
     .run(function($rootScope) {
         $rootScope.mediaUrl = function(id, width, height) {
